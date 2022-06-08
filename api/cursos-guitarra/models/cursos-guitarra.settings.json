@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos_guitarras",
+  "info": {
+    "name": "CursosGuitarra",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "fechaInicio": {
+      "type": "date",
+      "required": true
+    },
+    "precio": {
+      "type": "integer",
+      "required": true
+    },
+    "fechaFinal": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
